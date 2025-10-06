@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Login - KickPost</title>
+    <style>
+        body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial; background: #fafafa; }
+        .logo { display:block; height:75px; width:175px; margin: 15px auto; }
+        form#login-form { width: 100%; display:flex; justify-content:center; }
+        .card {
+            width: 92%; max-width: 460px; box-sizing: border-box;
+            border: 1px solid rgba(0,0,0,0.08); box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+                padding: 32px 28px 40px 28px; margin: 28px auto; background: #fff; border-radius: 8px;
+            display: flex; flex-direction: column; gap: 16px; align-items: stretch;
+        }
+        .card h1 { margin: 0; font-size: 32px; }
+        .card p.sub { margin: 0; color: #333; font-size: 14px; }
+    .card select, .card input, .card button { width: 100%; max-width: 100%; box-sizing: border-box; line-height: 1.2; }
+        .card select, .card input { padding: 10px 12px; border: 1px solid #ddd; border-radius: 6px; }
+    .card button { padding: 10px 12px; border-radius: 6px; border: 1px solid #09ff00; background: #ffffff; color: rgb(0, 255, 8); font-weight: 600; cursor: pointer; }
+    .card p, .card label { line-height: 1.25; }
+        .label-inline { font-size: 13px; margin-bottom: 6px; display:block; }
+        .terms { font-size: 12px; color: #666; }
+        .terms { font-size: 12px; color: #666; margin-top: 12px; line-height: 1.4; }
+        .terms a { color: rgb(0, 255, 8); font-weight: 600; text-decoration: none; }
+    </style>
+</head>
+
+<body>
+    <img src="kickpost-logo-color.d00d0b3cb6acc9b9869fb76e17484791.svg" alt="KickPost Logo" class="logo">
+
+    <form id="login-form" novalidate>
+        <fieldset class="card" role="group" aria-labelledby="login-title">
+            <h1 id="login-title">Let's KickPost!</h1>
+            <p>Choose your region and add your work email to start.</p>
+            <select name="region" id="country-select" aria-label="Choose your region">
+                <option value="">Choose your region</option>
+                <option value="na">North America</option>
+                <option value="eu">Europe</option>
+                <option value="apac">Asia</option>
+                <option value="latam">Oceania</option>
+            </select>
+
+            <label for="email" class="label-inline">WORK EMAIL*</label>
+            <input id="email" name="email" type="email" inputmode="email" required>
+
+            <button type="submit">NEXT</button>
+            <p class="terms">By joining you confirm you accept our <a href="#">terms of service</a> and <a href="#">privacy policy</a>.</p>
+        </fieldset>
+    </form>
+</body>
+
+</html>
